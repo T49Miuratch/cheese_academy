@@ -1,0 +1,728 @@
+/* ここから下に記載していく */
+html{
+
+  scroll-behavior: smooth;
+
+}
+
+header {
+  color: #000000;
+  margin : 10px ;
+  padding : 10px ;
+  text-align: center ;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.logo {
+  margin-left: 0px;
+  margin-bottom: 0px;
+  padding-bottom: 10px;
+  float: left;
+  width: 30vw;
+  align-items: center;
+}
+
+.float ul {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 0px;
+}
+
+.float li {
+  display: inline-block;
+  list-style: none;
+  margin-right: 20px;
+  margin-top: 25px;
+  padding: auto;
+  border-bottom: 4px solid #ffd500;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+li {
+	text-decoration: none;
+	text-align: center;
+  margin-right: 5px;
+}
+
+li a {
+	text-decoration: none;
+	text-align: center;
+	color:black;
+	font-weight: bold;
+  padding: 20px;
+}
+
+/* ヘッダー部分ここまで */
+
+body{
+  width: 100%;
+  margin: auto;
+  align-content: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.notice {
+  padding-bottom: 20px;
+  margin: auto;
+  text-align: center;
+  color: #666;
+  font-size: 10px; /* 文字の大きさ */
+}
+
+.mainvisual {
+  width: 100%;
+  margin: auto;
+  align-content: center;
+  position: relative;/*相対配置*/
+}
+
+.maintitle {
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size:3vw;
+  line-height:1.4em;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.subtitle {
+  text-align: center;
+  font-size:2vw;
+  line-height:1.4em;
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%,-50%);
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-style: bold;
+}
+
+.introduction {
+  margin: auto;
+  align-content: center;
+  padding : 20px ;
+  text-align: center ;
+  font-family: 'RocknRoll One', sans-serif;
+  width: 70vw;
+}
+
+p {
+  margin: auto;
+  width: 80vw;
+  overflow-wrap: normal;
+  align-content: center;  
+}
+
+.schooltext {
+  width: 100%;
+  text-align: center;
+  margin: 20px;
+  font-family: 'RocknRoll One', sans-serif;
+
+}
+
+/* ここからテーブル3種類 */
+
+table.newstable {
+  width: 960px;
+  border: solid 0px;
+  border-spacing: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.newsth{
+  width: 300px;
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+  word-break: break-word;
+}
+
+.newstd{
+  width: 300px;
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+  word-break: break-word;
+}
+
+
+.flex-parent {
+  width:70%;
+  display:flex;
+  flex-wrap:wrap; /*折り返し*/
+  justify-content:space-between;/*両端揃え*/
+  margin: auto;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  align-items: center;
+}
+.flex-child {
+  width:300px;
+  display:flex;
+  flex-direction:column;
+  border:1px solid #ccc;
+  box-sizing:border-box;
+  border-radius:10px;
+}
+.flex-grandchild-img {
+  width:100%;
+  height:auto;
+  position:relative;
+}
+.flex-grandchild-img::after {
+  display:block;
+  content:'';
+  width:100%;
+  height:0;
+  padding-top:60%;
+}
+.flex-grandchild-img img {
+  display:block;
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;left:0;
+  border-radius:10px 10px 0 0;
+}
+.flex-grandchild-inner {
+  display:flex;
+  flex-direction:column;
+  flex-grow:1;
+  width:93%;
+  margin:10px;
+}
+.flex-grandchild-inner h3 {
+  display:flex;
+  align-items:center;
+  min-height:56px;
+  color:#489279;
+  font-size:1.4rem;
+  line-height:1.6;
+  padding:5px 0;
+  margin:0 10px;
+  box-sizing:border-box;
+  border-bottom:1px solid #ccc;
+}
+.flex-grandchild-inner h3 img {
+  display:block;
+  width:12.5%;height:auto;
+  margin-right:8px;
+}
+.flex-grandchild-innerText {
+  flex-grow:1;
+  padding:5px 10px;
+  box-sizing:border-box;
+}
+
+@media screen and (max-width: 1360px) {
+  .flex-parent {
+    width:70%;
+    max-width:initial;
+    height:auto;
+    margin:0 auto;
+  }
+}
+@media screen and (max-width: 1280px) {
+  .flex-child {
+    width:49%;
+    display:flex;
+    flex-direction:column;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    border-radius:16px;
+  }
+  .flex-child:nth-of-type(n+3) {
+    margin-top:40px;
+  }
+}
+@media screen and (max-width: 896px) {
+  .flex-child {
+    width:900%;
+    display:flex;
+    flex-direction:row;
+    border:1px solid #ccc;
+    box-sizing:border-box;
+    border-radius:16px;
+  }
+  .flex-child:nth-of-type(n+2) {
+    margin-top:40px;
+  }
+  .flex-grandchild-img img {
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    position:absolute;
+    top:0;left:0;
+    border-radius:16px 0 0 16px;/*角丸変更*/
+  }
+  .flex-grandchild-inner h3 {
+    padding:10px 0;
+  }
+  .flex-grandchild-innerText {
+    min-height:120px;
+    overflow:hidden;
+    display:-webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp:4;/* 4行以上は省略 */
+  }
+}
+@media screen and (max-width: 786px) {
+  .flex-parent {
+    width:70%;
+    margin:0 auto;
+  }
+  .flex-child {
+    flex-direction:column;
+  }
+  .flex-grandchild-img img {
+    border-radius:16px 16px 0 0;/*角丸変更*/
+  }
+}
+@media screen and (max-width: 480px) {
+  .flex-parent {
+    width:90%;/*全体の幅を90%に*/
+  }
+}
+
+
+
+table.mapunder{
+  border:0px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 25px;
+}
+
+.thmu{
+  max-width: 180px;
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:35px;
+}
+.tdmu{
+  width: 350px;
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+}
+
+/* ここまでテーブル3種類 */
+
+.contentstext {
+ text-align: left;
+  width: 100%;
+  align-items: center;
+  margin: auto;
+  align-content: center;  
+
+}
+
+
+h1 {
+  margin: auto;
+  padding-left: 5%;
+  padding-right: 5%;
+  text-align: center ;
+  width: auto;
+  position: relative;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+.midashi {
+
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 30px;
+  color: #ff8c00;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.honbun{
+  margin-top: 30px;
+  margin-bottom: 60px;
+  text-align: center;
+  line-height:30px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.honbun-up-notice{
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height:30px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.newsdate{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+  text-align: left;
+  text-shadow: #ffd500;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.newstext{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 14px;
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+h2 {
+  margin: auto;
+  text-align: center ;
+  width: 350px;
+  position: relative;
+  padding: 1rem 2rem calc(1rem + 10px);
+  background: #fff100;
+  font-family: 'RocknRoll One', sans-serif;
+}
+
+h2:before {
+  align-content: center;
+  position: absolute;
+  top: -7px;
+  left: -7px;
+  width: 100%;
+  height: 100%;
+  content: '';
+  border: 4px solid #000;
+}
+
+h3 {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  font-family: 'RocknRoll One', sans-serif;
+  padding : 10px ;
+  width:300px;
+  background: #ffd500;
+}
+
+h4 {
+  margin: auto ;
+  text-align: center ;
+  align-items: center;
+  padding-bottom : 10px ;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap; /*折り返し*/
+  align-items: center;
+}
+
+.flexinimg{
+  width: 300px;  /* 縦に折り返し */
+  /* width: 20vw; こっちにするとスマホでも横並びでそのまま小さく*/
+}
+
+
+.ofwpnormal {
+  overflow-wrap: normal;
+  width: 50%;
+}
+
+.map{
+  text-align:  center;        /* 文字を中央揃え */
+  padding-top: 1px;
+  padding-left: 0px;                /* 余白指定 */
+  padding-right: 0px;
+  padding-bottom: 30px;
+  border:  solid 0px #fff;    /* 枠線指定 */
+  width: 100%;                /* 幅指定 */
+  margin:  0 auto;            /* 中央寄せ */
+  background: #ffd500;
+  align-items: center;
+}
+
+.iframe{
+
+  padding-top: 30px;
+  padding-left: 0px;                /* 余白指定 */
+  padding-right: 0px;
+  padding-bottom: 30px;
+
+
+}
+
+/* 以下からコース部分の指定CSS */
+
+table.coursetable{
+border: solid 0px #000;
+  width:80%;
+  margin: auto;
+  align-items: center;
+}
+
+th.coursetable{
+  max-width: 250px;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+  word-break: break-word;
+}
+
+td.coursetable{
+  width: 250px;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+  word-break: break-word;
+}
+
+td.coursetable_A{
+  width: 250px;
+  background-image: url(img/course_01.jpg);
+}
+
+td.coursetable_B{
+  width: 250px;
+  text-align: center;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  margin:15px;
+  word-break: break-word;
+}
+
+
+.courseinimg{
+
+  width: 100%;
+  
+}
+
+.coursemidashi{
+
+  text-align: left;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 22px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  align-items: center;
+
+}
+
+.coursemidashi-r{
+
+  text-align: right;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+  font-size: 22px;
+  margin-top: 0px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+  align-items: center;
+
+}
+
+.coursetext {
+  text-align: left;
+  font-size: 14px;
+  max-width: 430px;
+  align-items: center;
+  margin-top:40Px;
+  margin-left: 50px;
+  margin-right:50px ;
+  margin-bottom: 0px;
+  align-content: left;  
+ 
+ }
+
+ .coursetext-r {
+  text-align: left;
+  font-size: 14px;
+  max-width: 430px;
+  margin-right:50px;
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left: auto;
+  align-content: right;  
+ 
+ }
+
+/* 以上からコース部分の指定CSS */
+
+/* 以下からコンタクトフォームの指定CSS */
+
+.contact-table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.contact-body {
+  padding: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact-item {
+  text-align: left; /* テキスト左寄せ */
+  padding-left: 3%;
+  width: 20%; /* 横幅20%指定（背景色部分） */
+  background-color: #ffffe0; /* 背景色 */
+}
+
+.contact-body {
+  width: 80%; /* 横幅70%指定（白背景色部分） */
+}
+
+.contact-skill {
+  display: block;
+}
+
+.contact-skill + .contact-skill {
+  margin-top: 10px;
+}
+
+.contact-skill-txt {
+  margin-left: 5px;
+}
+
+.form-select {
+  width: 180px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-text {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  max-width: 400px;
+  font-family: 'Zen Kaku Gothic New', sans-serif;
+}
+
+.form-textarea {
+  width: 100%;
+  padding: 10px;
+  height: 200px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.contact-submit {
+  width: 250px; /* 横幅指定 */
+  background-color: #ffd500; /* 背景色 */
+  color: #333; /* 文字色 */
+  font-weight: bold; /* 文字の太さ */
+  display: block; /* インライン要素をブロック要素に変更 */
+  margin: 0 auto; /* 中央寄せ */
+  font-size: 16px; /* 文字の大きさ */
+  padding: 15px; /* 内側の余白 */
+  border-radius: 100vh; /* 角丸指定 */
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.contact-submit:hover {
+  background-color: #ff4500; /* 背景色 */
+  color: #fff; /* 文字色 */
+  transform: rotateX(360deg);
+ }
+/* hover要素の参考URL:https://digitor.jp/textbook/css-hover-sample/ */
+
+/* 以上までコンタクトフォームの指定CSS */
+
+.more-button {
+  width: 250px; /* 横幅指定 */
+  background-color: #ffd500; /* 背景色 */
+  color: #333; /* 文字色 */
+  font-weight: bold; /* 文字の太さ */
+  display: block; /* インライン要素をブロック要素に変更 */
+  margin: 0 auto; /* 中央寄せ */
+  font-size: 16px; /* 文字の大きさ */
+  padding: 15px; /* 内側の余白 */
+  margin-bottom: 60px;
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+  transition: 0s;
+  text-align: center;
+}
+
+.more-button:hover {
+  background-color: #ff4500; /* 背景色 */
+  color: #fff; /* 文字色 */
+  transform: rotateX(360deg);
+ }
+/* hover要素の参考URL:https://digitor.jp/textbook/css-hover-sample/ */
+
+
+.margin {
+
+padding: 0px;
+
+}
+
+.footer {
+  background-color: #707070;
+  color: #ffffff;
+  margin : 0px ;
+  padding : 20px ;
+  text-align: center ;
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.course-flex{
+
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap; /*折り返し*/
+  align-items: center;
+  width: 100%;
+
+}
+
+.cf-img{
+
+  width: 34%;
+  padding-left: 50px;
+  padding-right: 50px;
+
+}
+
+.cf-text{
+
+  text-align: left;
+  font-size: 14px;
+  max-width: 430px;
+  align-items: center;
+  margin-top:40Px;
+  margin-left: 50px;
+  margin-right:50px ;
+  margin-bottom: 0px;
+  align-content: left;
+
+}
