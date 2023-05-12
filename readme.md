@@ -1,5 +1,4 @@
-# ここにタイトルを入れる
-チーズアカデミー by 三浦悠介
+# チーズアカデミー by 三浦悠介
 ## DEMO
 https://github.com/T49Miuratch/cheese_academy.git
   - デプロイしている場合はURLを記入（任意）
